@@ -40,4 +40,24 @@ class TestNAME < Test::Unit::TestCase
     assert_equal(7, test_cell.get_row(8))
   end
 
+  def test_check_calculate_neighbor
+    test_cell = GameOfLife::Cell.new
+    test_cell.grid
+    (0...4).each do |row|
+      row = Array.new
+        (0...4).each do |cell|
+          row.push(0)
+        end
+        test_cell.grid.push(row)
+    end
+     
+    test_cell.grid[1][1] = 1
+    test_cell.grid[2][1] = 1
+    test_cell.grid[3][1] = 1
+
+    assert_equal(3, test_cell.calculate_neighbor(1, 3, 0, 2, 2, 2))
+
+    test_cell.grid[2][2] = 1
+    assert_equal(3, test_cell.calculate_neighbor(1, 3, 1, 3, 2, 1))
+  end
 end

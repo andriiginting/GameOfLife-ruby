@@ -42,7 +42,7 @@ module GameOfLife
       return min
     end
   
-    def calculate_neighbor_sum(min_row, max_row, min_col, max_col, row_index, col_index)
+    def calculate_neighbor(min_row, max_row, min_col, max_col, row_index, col_index)
       sum = 0
       for i in min_row..max_row 
         for j in min_col..max_col 
@@ -58,7 +58,7 @@ module GameOfLife
       max_row = get_max_row(row_index)
       min_col = get_col(col_index)
       max_col = get_max_col(col_index)
-      result = calculate_neighbor_sum(min_row, max_row, min_col, max_col, row_index, col_index)
+      result = calculate_neighbor(min_row, max_row, min_col, max_col, row_index, col_index)
 
       if result > 3 || result < 2
         return 0
@@ -72,7 +72,7 @@ module GameOfLife
         max_row = get_max_row(row_index)
         min_col = get_col(col_index)
         max_col = get_max_col(col_index)
-        result = calculate_neighbor_sum(min_row, max_row, min_col, max_col, row_index, col_index)
+        result = calculate_neighbor(min_row, max_row, min_col, max_col, row_index, col_index)
   
         if result == 3
           return 1
