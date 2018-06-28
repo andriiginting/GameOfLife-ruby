@@ -1,4 +1,4 @@
-require "./lib/cell.rb"
+require './lib/cell.rb'
 require "test/unit"
 
 class TestNAME < Test::Unit::TestCase
@@ -12,7 +12,7 @@ class TestNAME < Test::Unit::TestCase
   end
 
   def test_check_get_col
-    test_cell = Cell.new
+    test_cell = GameOfLife::Cell.new
     test_cell.grid
     (0...7).each do |row|
       row = Array.new
