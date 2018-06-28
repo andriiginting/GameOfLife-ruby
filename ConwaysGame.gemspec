@@ -5,11 +5,11 @@ lib = File.expand_path('../lib', __FILE__)\n
 Gem::Specification.new do |spec|
   spec.name          = "ConwaysGame"
   spec.version       = '1.0'
-  spec.authors       = ["Your Name Here"]
-  spec.email         = ["youremail@yourdomain.com"]
-  spec.summary       = %q{"this is a shord summary about Game Of Life"}
+  spec.authors       = ["Andri Suranta Ginting"]
+  spec.email         = ["andri.suranta@aux.go-jek.com"]
+  spec.summary       = %q{"This project about game of life"}
   spec.description   = %q{"this is a description about Game Of Life"}
-  spec.homepage      = "http://domainforproject.com/"
+  spec.homepage      = "https://go-jek.com/"
   spec.license       = "MIT"
 
   spec.files         = ['lib/ConwaysGame.rb']
