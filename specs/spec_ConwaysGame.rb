@@ -60,4 +60,33 @@ class TestNAME < Test::Unit::TestCase
     test_cell.grid[2][2] = 1
     assert_equal(3, test_cell.calculate_neighbor(1, 3, 1, 3, 2, 1))
   end
+
+  def test_check_create_pattern()
+    test_cell = GameOfLife::Cell.new
+    file_name = "./test_input_file.txt"
+    test_cell.create_pattern(file_name)
+
+    arr = [ [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 1, 1, 1, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0] ]
+
+    assert_equal(arr, test_cell.grid)
+  end
+
+  def test_check_next_generation
+    test_cell = GameOfLife::Cell.new
+    file_name = "./test_input_file.txt"
+    test_cell.create_pattern(file_name)
+
+    arr = [ [0, 0, 0, 0, 0],
+            [0, 0, 1, 0, 0],
+            [0, 0, 1, 0, 0],
+            [0, 0, 1, 0, 0],
+            [0, 0, 0, 0, 0] ]
+
+    test_cell.next_generation
+    assert_equal(arr, test_cell.grid)
+  end
 end
