@@ -24,4 +24,20 @@ class TestNAME < Test::Unit::TestCase
      assert_equal(7, test_cell.get_col(8))
     assert_equal(0, test_cell.get_col(0))
   end
+
+  def test_cell_check_get_row
+    test_cell = GameOfLife::Cell.new
+    test_cell.grid
+    (0...7).each do |row|
+      row = Array.new
+        (0...7).each do |cell|
+          row.push(0)
+        end
+        test_cell.grid.push(row)
+      end
+       
+    assert_equal(2, test_cell.get_row(3))
+    assert_equal(7, test_cell.get_row(8))
+  end
+
 end
