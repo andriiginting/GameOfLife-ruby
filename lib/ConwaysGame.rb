@@ -1,2 +1,8 @@
-# Your code goes here...
-puts "Update your code here at lib/ConwaysGame.rb"
+require './lib/cell.rb'
+
+module GameOfLife
+  
+end
+
+include GameOfLife
+run_game_of_life()

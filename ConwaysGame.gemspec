@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
 
   spec.files         = ['lib/ConwaysGame.rb']
-  spec.executables   = ['bin/ConwaysGame']
+  
   spec.test_files    = ['tests/test_ConwaysGame.rb']
   spec.require_paths = ["lib"]
 end
