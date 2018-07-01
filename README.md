@@ -18,6 +18,10 @@ $ ruby lib/ConwaysGame.rb
 ```
 $ rake test
 ```
+or
+```
+$ rspec --format documentation
+```
 
 ## Author
-
+Andriiginting
